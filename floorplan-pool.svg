@@ -1,0 +1,102 @@
+<svg viewBox="0 0 800 540" xmlns="http://www.w3.org/2000/svg" font-family="'Space Mono', monospace">
+  <defs>
+    <style>
+      .line { fill: none; stroke: #132420; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+      .line-thin { fill: none; stroke: #132420; stroke-width: 1.4; opacity: 0.55; }
+      .fill-deck { fill: #E4D9BC; stroke: #132420; stroke-width: 2.5; }
+      .fill-pool { fill: #7fb0a7; stroke: #132420; stroke-width: 2.5; }
+      .fill-struct { fill: #D8C9A3; stroke: #132420; stroke-width: 2.5; }
+      .fill-bar { fill: #B98D4F; stroke: #132420; stroke-width: 2.5; opacity: 0.85; }
+      .label { fill: #132420; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; text-anchor: middle; }
+      .label-sm { fill: #132420; font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; text-anchor: middle; opacity: 0.75; }
+      .chair { fill: #F4EEE0; stroke: #132420; stroke-width: 1.6; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="800" height="540" fill="#ECE3CE"/>
+
+  <!-- main level edge above -->
+  <line x1="40" y1="46" x2="760" y2="46" class="line"/>
+  <text x="400" y="30" class="label-sm">Main level above</text>
+
+  <!-- staircase: two flights converging to a landing -->
+  <g>
+    <!-- left flight -->
+    <path d="M330,46 L300,150 L370,150 L370,46 Z" class="fill-struct"/>
+    <g class="line-thin">
+      <line x1="330" y1="58" x2="300" y2="58"/>
+      <line x1="331" y1="70" x2="298" y2="70"/>
+      <line x1="333" y1="82" x2="296" y2="82"/>
+      <line x1="335" y1="94" x2="294" y2="94"/>
+      <line x1="337" y1="106" x2="302" y2="106"/>
+      <line x1="339" y1="118" x2="304" y2="118"/>
+      <line x1="341" y1="130" x2="306" y2="130"/>
+      <line x1="343" y1="142" x2="308" y2="142"/>
+    </g>
+    <!-- right flight -->
+    <path d="M430,46 L500,150 L430,150 L430,46 Z" class="fill-struct"/>
+    <g class="line-thin">
+      <line x1="430" y1="58" x2="463" y2="58"/>
+      <line x1="429" y1="70" x2="466" y2="70"/>
+      <line x1="428" y1="82" x2="469" y2="82"/>
+      <line x1="427" y1="94" x2="472" y2="94"/>
+      <line x1="426" y1="106" x2="469" y2="106"/>
+      <line x1="425" y1="118" x2="466" y2="118"/>
+      <line x1="424" y1="130" x2="463" y2="130"/>
+      <line x1="423" y1="142" x2="460" y2="142"/>
+    </g>
+    <!-- landing -->
+    <rect x="330" y="150" width="140" height="46" class="fill-struct"/>
+    <text x="400" y="177" class="label-sm">Landing</text>
+    <!-- outline of stair block -->
+    <path d="M330,46 L300,150 L330,196 L470,196 L500,150 L430,46" class="line" fill="none"/>
+    <line x1="330" y1="46" x2="430" y2="46" class="line"/>
+  </g>
+
+  <!-- pool bar -->
+  <rect x="230" y="206" width="110" height="44" rx="2" class="fill-bar"/>
+  <text x="285" y="233" class="label-sm" fill="#F4EEE0" opacity="1">Pool Bar</text>
+
+  <!-- small storage/pump structure -->
+  <rect x="90" y="180" width="60" height="70" rx="2" class="fill-struct"/>
+  <line x1="112" y1="180" x2="112" y2="250" class="line-thin"/>
+  <text x="120" y="270" class="label-sm">Storage</text>
+
+  <!-- deck (large rounded rect) -->
+  <rect x="60" y="210" width="680" height="270" rx="14" class="fill-deck"/>
+
+  <!-- pool -->
+  <rect x="150" y="255" width="500" height="185" rx="2" class="fill-pool"/>
+  <rect x="164" y="269" width="472" height="157" rx="1" fill="none" stroke="#132420" stroke-width="1.4" opacity="0.5"/>
+  <text x="400" y="352" class="label" fill="#132420" font-size="16">40&#8217; Pool</text>
+  <text x="400" y="372" class="label-sm">Heated by solar</text>
+
+  <!-- pool ladder -->
+  <g class="line-thin" stroke-width="2">
+    <line x1="600" y1="255" x2="600" y2="230"/>
+    <line x1="616" y1="255" x2="616" y2="230"/>
+    <path d="M598,230 Q608,218 618,230" fill="none"/>
+  </g>
+
+  <!-- lounge chairs -->
+  <g>
+    <rect x="672" y="240" width="24" height="60" rx="4" class="chair"/>
+    <rect x="672" y="308" width="24" height="60" rx="4" class="chair"/>
+    <rect x="672" y="376" width="24" height="60" rx="4" class="chair"/>
+    <rect x="84" y="290" width="24" height="60" rx="4" class="chair" transform="rotate(0)"/>
+  </g>
+
+  <!-- deck border label -->
+  <text x="400" y="465" class="label-sm">Pool deck &amp; patio</text>
+
+  <!-- compass -->
+  <g transform="translate(742,60)" opacity="0.65">
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#132420" stroke-width="1.2"/>
+    <line x1="0" y1="-13" x2="0" y2="13" stroke="#132420" stroke-width="1.2"/>
+    <line x1="-13" y1="0" x2="13" y2="0" stroke="#132420" stroke-width="1.2"/>
+    <text x="0" y="-19" class="label-sm" font-size="8">N</text>
+  </g>
+
+  <text x="700" y="504" text-anchor="end" class="label-sm" font-size="9" opacity="0.5">Schematic, not to scale</text>
+</svg>
